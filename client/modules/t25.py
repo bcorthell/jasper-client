@@ -21,6 +21,7 @@ def handle(text, mic, profile):
 
     message = random.choice(messages)
 
+    mic.say(message)
 
 
 def isValid(text):
@@ -31,4 +32,3 @@ def isValid(text):
         text -- user-input, typically transcribed speech
     """
     return bool(re.search(r'\bworkout\b', text, re.IGNORECASE))
-
