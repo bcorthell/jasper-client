@@ -9,6 +9,8 @@ from sys import maxint
 from client import jasperpath
 WORDS = ["WHO", "WHAT", "HOW MUCH", "HOW MANY", "HOW OLD"]
 
+PRIORITY = 1
+
 
 def handle(text, mic, profile):
     app_id = profile['keys']['WOLFRAMALPHA']
