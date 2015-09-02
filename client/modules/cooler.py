@@ -2,6 +2,7 @@
 import urllib2
 import random
 import re
+import time
 
 WORDS = ["HOT", "COLD"]
 
@@ -19,6 +20,8 @@ def handle(text, mic, profile):
     """
 
     mic.say("So take off all your clothes")
+    time.sleep(5)
+    mic.say("Just kidding, turning on the cooler now")
     url_response = urllib2.urlopen('http://192.168.0.231/cgi-bin/relay.cgi?on')
 
 
