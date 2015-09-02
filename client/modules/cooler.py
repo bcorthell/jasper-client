@@ -41,13 +41,10 @@ def handle(text, mic, profile):
 
 def isValid(text):
     """
-        Returns True if input is related to cooler
+        Returns True if the text is related to the cooler
+
         Arguments:
         text -- user-input, typically transcribed speech
     """
-    if re.search(r'\bturn on cooler\b', text, re.IGNORECASE):
-        return True
-    elif re.search(r'\bturn off cooler\b', text, re.IGNORECASE):
-        return True
-    else:
-        return False
+    return bool(re.search(r'\b(weathers?|hot|' +
+                          r'cold|freezing|)\b', text, re.IGNORECASE)
