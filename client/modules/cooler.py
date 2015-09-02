@@ -20,9 +20,9 @@ def handle(text, mic, profile):
     """
 
     mic.say("So take off all your clothes")
-    time.sleep(5)
+    time.sleep(3)
     mic.say("Just kidding, turning on the cooler now")
-    time.sleep(2)
+    time.sleep(1)
     url_response = urllib2.urlopen('http://192.168.0.231/cgi-bin/relay.cgi?on')
 
 
