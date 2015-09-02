@@ -19,6 +19,7 @@ def handle(text, mic, profile):
     """
 
     mic.say("So take off all your clothes")
+    url_response = urllib2.urlopen('http://192.168.0.231/cgi-bin/relay.cgi?on')
 
 
 def isValid(text):
