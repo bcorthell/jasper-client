@@ -70,7 +70,7 @@ class MusicMode(object):
         self.music = mpdwrapper
 
         # index spotify playlists into new dictionary and language models
-        phrases = ["STOP", "CLOSE", "PLAY", "PAUSE", "NEXT", "PREVIOUS",
+        phrases = ["STOP", "CLOTHES", "PLAY", "PAWS", "NEXT", "PREVIOUS",
                    "LOUDER", "SOFTER", "LOWER", "HIGHER", "VOLUME",
                    "PLAYLIST"]
         phrases.extend(self.music.get_soup_playlist())
@@ -96,7 +96,7 @@ class MusicMode(object):
             self.mic.say("Playing %s" % self.music.current_song())
             self.music.play()
             return
-        elif "PAUSE" in command:
+        elif "PAWS" in command:
             self.mic.say("Pausing music")
             # not pause because would need a way to keep track of pause/play
             # state
@@ -172,7 +172,7 @@ class MusicMode(object):
             input = self.mic.activeListen(MUSIC=True)
 
             if input:
-                if "close" in input.lower():
+                if "clothes" in input.lower():
                     self.mic.say("Closing Spotify")
                     return
                 self.delegateInput(input)
